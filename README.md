@@ -26,4 +26,4 @@ $$
 ## RUIDO DE IMPULSO
 ![GRÁFICA IMPULSO](https://github.com/estmanuelamancera/Lab1/blob/main/IMAGENES/ruido%20impulso.png?raw=true)
 ## RUIDO DE ARTEFACTO
-![GRÁFICA ARTEFACTO]()
+![GRÁFICA ARTEFACTO](https://github.com/estmanuelamancera/Lab1/blob/main/IMAGENES/ruido%20artefacto.png?raw=true)

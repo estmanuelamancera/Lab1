@@ -33,6 +33,7 @@ def calcular_snr(signal, noise):
 ![GRÁFICA GAUSSIANO](https://github.com/estmanuelamancera/Lab1/blob/main/IMAGENES/ruido%20gauss.png?raw=true
 )
 #### CÓDIGO 
+
 ```python
 
 sigma = 2 * np.std(senal)  # intensidad ajustable

@@ -24,5 +24,6 @@ $$
 ![GRÁFICA GAUSSIANO](https://github.com/estmanuelamancera/Lab1/blob/main/IMAGENES/ruido%20gauss.png?raw=true
 )
 ## RUIDO DE IMPULSO
-![GRÁFICA IMPULSO]  (https://github.com/estmanuelamancera/Lab1/blob/main/IMAGENES/ruido%20impulso.png?raw=true)
+![GRÁFICA IMPULSO](https://github.com/estmanuelamancera/Lab1/blob/main/IMAGENES/ruido%20impulso.png?raw=true)
 ## RUIDO DE ARTEFACTO
+![GRÁFICA ARTEFACTO]()

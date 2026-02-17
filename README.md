@@ -33,6 +33,12 @@ def calcular_snr(signal, noise):
 
 ```python
 
+sigma = 2 * np.std(senal)  # intensidad ajustable
+ruido_gauss = np.random.normal(0, sigma, len(senal))
+
+senal_gauss = senal + ruido_gauss
+snr_gauss = calcular_snr(senal, ruido_gauss)
+
 ```
 
 
@@ -40,5 +46,40 @@ def calcular_snr(signal, noise):
 )
 ## RUIDO DE IMPULSO
 ![GRÁFICA IMPULSO](https://github.com/estmanuelamancera/Lab1/blob/main/IMAGENES/ruido%20impulso.png?raw=true)
+
+```python
+
+senal_impulso = senal.copy()
+ruido_impulso = np.zeros_like(senal)
+
+prob = 0.05  # 1% de muestras afectadas
+num_impulsos = int(prob * len(senal))
+
+indices = np.random.choice(len(senal), num_impulsos, replace=False)
+amplitud = 3 * np.std(senal)
+
+for i in indices:
+    valor = amplitud * np.random.choice([-1, 1])
+    senal_impulso[i] += valor
+    ruido_impulso[i] = valor
+
+snr_impulso = calcular_snr(senal, ruido_impulso)
+
+
+```
+
+
 ## RUIDO DE ARTEFACTO
 ![GRÁFICA ARTEFACTO](https://github.com/estmanuelamancera/Lab1/blob/main/IMAGENES/ruido%20artefacto.png?raw=true)
+
+```python
+baseline = 0.5 * np.sin(2 * np.pi * 0.5 * t)      # 0.5 Hz
+interferencia = 0.2 * np.sin(2 * np.pi * 60 * t) # 60 Hz
+
+ruido_artefacto = baseline + interferencia
+senal_artefacto = senal + ruido_artefacto
+
+snr_artefacto = calcular_snr(senal, ruido_artefacto)
+
+
+```

@@ -18,9 +18,24 @@ Para calcular el SNR se utiliza la siguiente expresión:
 $$
 SNR = \frac{P señal}{Pruido}
 $$
+### FUNCIÓN PARA CALCULAR EL SNR
+```python
+
+def calcular_snr(signal, noise):
+    potencia_senal = np.mean(signal**2)
+    potencia_ruido = np.mean(noise**2)
+    return 10 * np.log10(potencia_senal / potencia_ruido)
+
+```
 
 ### RUIDO GAUSSIANO
 ## CÓDIGO Y GRÁFICA
+
+```python
+
+```
+
+
 ![GRÁFICA GAUSSIANO](https://github.com/estmanuelamancera/Lab1/blob/main/IMAGENES/ruido%20gauss.png?raw=true
 )
 ## RUIDO DE IMPULSO

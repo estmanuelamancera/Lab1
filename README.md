@@ -27,10 +27,12 @@ def calcular_snr(signal, noise):
     return 10 * np.log10(potencia_senal / potencia_ruido)
 
 ```
-
-### RUIDO GAUSSIANO
 ## CÓDIGO Y GRÁFICA
 
+### RUIDO GAUSSIANO
+![GRÁFICA GAUSSIANO](https://github.com/estmanuelamancera/Lab1/blob/main/IMAGENES/ruido%20gauss.png?raw=true
+)
+#### CÓDIGO 
 ```python
 
 sigma = 2 * np.std(senal)  # intensidad ajustable
@@ -40,13 +42,10 @@ senal_gauss = senal + ruido_gauss
 snr_gauss = calcular_snr(senal, ruido_gauss)
 
 ```
-
-
-![GRÁFICA GAUSSIANO](https://github.com/estmanuelamancera/Lab1/blob/main/IMAGENES/ruido%20gauss.png?raw=true
-)
 ## RUIDO DE IMPULSO
 ![GRÁFICA IMPULSO](https://github.com/estmanuelamancera/Lab1/blob/main/IMAGENES/ruido%20impulso.png?raw=true)
 
+#### CÓDIGO 
 ```python
 
 senal_impulso = senal.copy()
@@ -72,6 +71,7 @@ snr_impulso = calcular_snr(senal, ruido_impulso)
 ## RUIDO DE ARTEFACTO
 ![GRÁFICA ARTEFACTO](https://github.com/estmanuelamancera/Lab1/blob/main/IMAGENES/ruido%20artefacto.png?raw=true)
 
+#### CÓDIGO 
 ```python
 baseline = 0.5 * np.sin(2 * np.pi * 0.5 * t)      # 0.5 Hz
 interferencia = 0.2 * np.sin(2 * np.pi * 60 * t) # 60 Hz

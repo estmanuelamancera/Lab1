@@ -19,3 +19,9 @@ $$
 SNR = \frac{P señal}{Pruido}
 $$
 
+### RUIDO GAUSSIANO
+## CÓDIGO Y GRÁFICA
+![GRÁFICA]()
+## RUIDO DE IMPULSO
+
+## RUIDO DE ARTEFACTO

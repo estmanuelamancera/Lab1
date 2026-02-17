@@ -21,7 +21,7 @@ $$
 
 ### RUIDO GAUSSIANO
 ## CÓDIGO Y GRÁFICA
-![GRÁFICA](<img width="1180" height="267" alt="image" src="https://github.com/user-attachments/assets/4793b9dc-4e5d-4a2e-981a-b2980123a121" />
+![GRÁFICA](https://github.com/estmanuelamancera/Lab1/blob/main/IMAGENES/ruido%20gauss.png?raw=true
 )
 ## RUIDO DE IMPULSO
 

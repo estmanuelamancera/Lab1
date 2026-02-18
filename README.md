@@ -15,12 +15,12 @@ En la Parte B del laboratorio se generó experimentalmente una señal fisiológi
 
 Posteriormente, se calcularon estadísticos descriptivos como la media, la mediana, la varianza muestral, la desviación estándar, el coeficiente de variación, la asimetría, la curtosis y los valores máximo y mínimo, con el fin de caracterizar globalmente la señal adquirida. Finalmente, estos resultados se compararon con los obtenidos a partir de la señal descargada de PhysioNet, permitiendo identificar similitudes estructurales y pequeñas diferencias atribuibles al ruido del sistema de adquisición, a la cuantización del ADC y a posibles interferencias del entorno experimental.
 
-![diagrama parte b ](https://github.com/user-attachments/assets/7fd6434a-a7f1-4f3f-857c-db7333f66374)/>
-## CÓDIGO
+![diagrama parte b ](https://github.com/user-attachments/assets/7fd6434a-a7f1-4f3f-857c-db7333f66374)
+## SEÑAL ADQUIRIDA 
 
 <img width="2184" height="827" alt="image" src="https://github.com/user-attachments/assets/0759e42e-7bc8-44eb-9b23-e81168093c54" />
 
-
+## CÓDIGO
 
 
 # PROCESAMIENTO 

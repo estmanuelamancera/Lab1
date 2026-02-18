@@ -1,4 +1,17 @@
 ### INFORME DE LABORATORIO #1.
+### ANALÍSIS ESTADÍSTICOS DE LA SEÑAL
+### DESCRIPCIÓN 
+En este repositorio se llevó a cabo el análisis de señales biomédicas empleando tanto datos obtenidos de bases de datos como señales adquiridas de manera experimental. Inicialmente, se descargó una señal fisiológica, la cual fue importada a Python para su visualización y para el cálculo de parámetros estadísticos relevantes.
+
+Adicionalmente, se capturó una señal mediante un osciloscopio, utilizando un sistema DAQ para su adquisición, y posteriormente se compararon sus características con las de la señal previamente analizada. Finalmente, se evaluó la influencia del ruido en ambas señales a través del cálculo de la Relación Señal-Ruido (SNR), examinando cómo este afecta la calidad y el comportamiento de la señal.
+## OBJETIVOS 
+1. Seleccionar, importar y examinar señales fisiológicas con el fin de realizar su procesamiento y análisis estadístico en Python.
+2. Emplear funciones predefinidas en Python junto con procedimientos manuales para comparar las características estadísticas de señales simuladas frente a señales reales.
+3. Generar una señal fisiológica en el laboratorio, adquirirla mediante un sistema DAQ y evaluar sus propiedades estadísticas principales.
+### PROCESAMIENTO 
+### PARTE A 
+### PARTE B 
+## PROCESAMIENTO 
 
 
 ### PARTE C

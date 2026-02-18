@@ -9,12 +9,17 @@ Adicionalmente, se capturó una señal mediante un osciloscopio, utilizando un s
 2. Emplear funciones predefinidas en Python junto con procedimientos manuales para comparar las características estadísticas de señales simuladas frente a señales reales.
 3. Generar una señal fisiológica en el laboratorio, adquirirla mediante un sistema DAQ y evaluar sus propiedades estadísticas principales.
 ### PROCESAMIENTO 
-### PARTE A 
-### PARTE B 
-## PROCESAMIENTO 
+## PARTE A 
+## PARTE B 
+En la Parte B del laboratorio se generó experimentalmente una señal fisiológica mediante el generador de señales biológicas y posteriormente se adquirió utilizando un sistema DAQ conectado al computador a través de un puerto USB y configurado con el controlador NI-DAQmx. El dispositivo recibió la señal analógica, la convirtió a formato digital mediante su conversor analógico-digital (ADC) y la almacenó en un archivo con extensión `.csv`, que contenía las columnas correspondientes al tiempo de muestreo y a los valores de amplitud. La señal fue importada en Python mediante el entorno Spyder, donde se verificó su integridad, se graficó en el dominio del tiempo y se construyó su histograma para analizar la distribución de amplitudes.
+
+Posteriormente, se calcularon estadísticos descriptivos como la media, la mediana, la varianza muestral, la desviación estándar, el coeficiente de variación, la asimetría, la curtosis y los valores máximo y mínimo, con el fin de caracterizar globalmente la señal adquirida. Finalmente, estos resultados se compararon con los obtenidos a partir de la señal descargada de PhysioNet, permitiendo identificar similitudes estructurales y pequeñas diferencias atribuibles al ruido del sistema de adquisición, a la cuantización del ADC y a posibles interferencias del entorno experimental.
 
 
-### PARTE C
+# PROCESAMIENTO 
+
+
+## PARTE C
 En esta seccion se tomo la señal del apartado anterior (La señal obtenida del generador de señales) para posteriormente agregarle diferentes tipos de ruido y finalmnete compararlas entre si.
 
 ### PROCEDIMIENTO

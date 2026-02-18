@@ -21,8 +21,91 @@ Posteriormente, se calcularon estadísticos descriptivos como la media, la media
 <img width="2184" height="827" alt="image" src="https://github.com/user-attachments/assets/0759e42e-7bc8-44eb-9b23-e81168093c54" />
 
 ## CÓDIGO
+# Carga y preprocesamiento de la señal
+En esta etapa se importa la señal digitalizada generada por el sistema DAQ y almacenada en formato .csv. Se separan las variables de tiempo y amplitud, y se eliminan posibles valores no válidos (NaN) para garantizar la integridad del análisis estadístico. Finalmente, se determina el tamaño muestral 𝑁, el cual es relevante para el cálculo de los estimadores muestrales.
+
+```
+# PARTE B 
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.stats import skew, kurtosis
 
 
+# CARGAR SEÑAL ADQUIRIDA 
+df = pd.read_csv("/content/medicion1.csv")
+
+tiempo = df["timeStamps"].values
+senal = df["data"].values
+
+# Eliminar posibles valores NaN
+mask = ~np.isnan(senal)
+senal = senal[mask]
+tiempo = tiempo[mask]
+
+N = len(senal)
+
+print("Número de muestras:", N)
+```
+# Visualización de la señal
+La representación en el dominio del tiempo permite verificar la morfología y estabilidad de la señal adquirida experimentalmente. Esta validación visual es fundamental antes de proceder con el análisis estadístico.
+```
+# GRAFICA PRINCIPAL
+plt.figure(figsize=(14,5))
+plt.plot(tiempo, senal)
+
+plt.title("Señal Fisiológica Generada y Adquirida",
+          fontsize=16, fontweight='bold')
+
+plt.xlabel("Tiempo (s)", fontsize=12)
+plt.ylabel("Amplitud (V)", fontsize=12)
+
+plt.grid(True, alpha=0.3)
+plt.show()
+```
+# Análisis de distribución
+
+El histograma no representa la señal en función del tiempo, sino que muestra la frecuencia con la que aparecen los distintos valores de amplitud dentro del conjunto de datos. Esta representación permite analizar la distribución estadística de la señal, identificando su nivel de dispersión, posible simetría o presencia de valores extremos. De esta forma, el histograma complementa la gráfica temporal y sirve como base para la interpretación de parámetros como la asimetría y la curtosis.
+```
+# HISTOGRAMA
+plt.figure(figsize=(8,5))
+plt.hist(senal, bins=60)
+
+plt.title("Histograma de la Señal Adquirida",
+          fontsize=14, fontweight='bold')
+
+plt.xlabel("Amplitud")
+plt.ylabel("Frecuencia")
+plt.show()
+```
+# Gráfica  Histograma de la señal 
+<img width="1063" height="745" alt="image" src="https://github.com/user-attachments/assets/af31127b-2878-460a-b36c-5e8f9710f386" />
+
+El histograma evidencia una distribución no uniforme con concentración principal alrededor de 1.1 V y presencia de valores extremos en torno a 0.8 V y 2.4 V. Esto sugiere una distribución multimodal asociada a los niveles característicos de la señal generada, así como posible asimetría positiva y presencia de picos de mayor amplitud.
+
+# Cálculo de estadísticos descriptivos muestrales
+En esta sección se calculan los principales estadísticos descriptivos. La media representa el valor promedio de amplitud. La varianza y la desviación estándar se estiman como muestrales (utilizando 𝑁−1), dado que se trabaja con datos experimentales. El coeficiente de variación permite analizar la dispersión relativa respecto a la media. Finalmente, la asimetría y la curtosis describen la forma de la distribución, indicando posibles sesgos o concentración extrema de valores.
+```
+# ESTADISTICOS DESCRIPTIVOS (MUESTRALES)
+
+# Media
+media = np.mean(senal)
+
+# Desviación estándar muestral (N-1)
+desv = np.std(senal, ddof=1)
+
+# Varianza muestral
+varianza = np.var(senal, ddof=1)
+
+# Coeficiente de variación
+coef_var = desv / media
+
+# Asimetría
+asimetria = skew(senal)
+
+# Curtosis
+curt = kurtosis(senal)
+```
 # PROCESAMIENTO 
 
 

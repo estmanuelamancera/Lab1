@@ -381,3 +381,7 @@ snr_artefacto = calcular_snr(senal, ruido_artefacto)
 
 
 ```
+## Analisis Resultados
+Los parámetros estadísticos permiten analizar señales biomédicas de forma rápida y sencilla, ya que resumen su comportamiento general mediante valores como la media o la variabilidad. Esto ayuda a identificar cambios anormales que pueden estar relacionados con posibles patologías y facilita el monitoreo continuo de los pacientes y el análisis automático de grandes cantidades de datos.
+
+Sin embargo, estos parámetros solo describen la señal de manera global y pueden perder información importante sobre detalles específicos del proceso fisiológico. Además, pueden verse afectados por ruido, movimientos o errores durante la adquisición, por lo que deben utilizarse como apoyo y no como único criterio diagnóstico.

@@ -14,6 +14,10 @@ En la Parte, se realizó el análisis estadístico de una señal biomédica con 
 
 Posteriormente, se calcularon los principales estadísticos descriptivos: media, desviación estándar, coeficiente de variación, histograma, asimetría (skewness) y curtosis. Estos parámetros se obtuvieron de dos maneras: implementando las fórmulas matemáticas desde cero y utilizando funciones predefinidas de Python.
 
+## SEÑAL ADQUIRIDA 
+
+<img width="2184" height="827" alt="image" src="https://github.com/user-attachments/assets/0759e42e-7bc8-44eb-9b23-e81168093c54" />
+
 ![diagrama parte a ](DiagramaA.jpeg)
 ## PARTE B 
 En la Parte B del laboratorio se generó experimentalmente una señal fisiológica mediante el generador de señales biológicas y posteriormente se adquirió utilizando un sistema DAQ conectado al computador a través de un puerto USB y configurado con el controlador NI-DAQmx. El dispositivo recibió la señal analógica, la convirtió a formato digital mediante su conversor analógico-digital (ADC) y la almacenó en un archivo con extensión `.csv`, que contenía las columnas correspondientes al tiempo de muestreo y a los valores de amplitud. La señal fue importada en Python mediante el entorno Spyder, donde se verificó su integridad, se graficó en el dominio del tiempo y se construyó su histograma para analizar la distribución de amplitudes.

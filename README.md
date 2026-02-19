@@ -291,11 +291,17 @@ asimetria = skew(senal)
 # Curtosis
 curt = kurtosis(senal)
 ```
-# RESULTADOS ESTADISTICOS DESCRIPTIVOS 
+# COMPARACIÓN DE RESULTADOS ESTADISTICOS DESCRIPTIVOS PARTE A Y B 
 
-<img width="655" height="247" alt="image" src="https://github.com/user-attachments/assets/d7985ddc-36b4-4ed1-90c8-b5a9e7dd0e47" />
+| ESTADISTICO     | VALOR PARTE A| VALORES PARTE B 
+|-----------------|----------|----------|
+| Media          | | 1.219676066378888 |
+| Varianza | |0.16256503899014302 |
+| Desviación estándar | | 0.4031935502834129 |
+| Coeficiente de variación | | 0.3305742905003125 |
+| Asimetría | | 2.4958785739425173 |
+| Curtosis | | 4.689155028469519 |
 
-Los estadísticos descriptivos evidencian que la señal presenta un valor promedio de 1.22 V con una dispersión relativa del 33%. La alta asimetría positiva (2.5) y la curtosis elevada (4.69) indican una distribución no normal, caracterizada por la presencia de picos de alta amplitud que generan colas pesadas hacia valores superiores. Estos resultados son coherentes con el comportamiento observado en el histograma y reflejan la naturaleza no uniforme de la señal generada experimentalmente.
 
 
 ## PARTE C

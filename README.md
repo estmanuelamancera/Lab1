@@ -137,8 +137,73 @@ plt.show()
 ```
 ## HISTOGRAMA
 
-<img width="2184" height="827" alt="image" src="ECGATLETAS.png" />
+<img width="2184" height="827" alt="image" src="HistogramaA.png" />
 
+# Cálculo de Estadísticos
+Aquí se implementan matemáticamente las ecuaciones:
+
+🔹 Media:Promedio de todas las muestras.
+
+🔹 Varianza:Promedio del cuadrado de la diferencia respecto a la media.
+
+🔹 Desviación estándar:Raíz cuadrada de la varianza.
+
+🔹 Coeficiente de variación:Relación entre desviación estándar y media.
+
+🔹 Asimetría (Skewness):Mide si la distribución está inclinada hacia la derecha o izquierda.
+
+🔹 Curtosis:Mide qué tan puntiaguda o achatada es la distribución.
+Este bloque permite comprender la base matemática de cada parámetro.
+```
+# =========================================================
+# =========================================================
+# ESTADISTICOS DESDE CERO (FORMULAS)
+# =========================================================
+# =========================================================
+
+media = sum(senal)/len(senal)
+
+varianza = sum((x-media)**2 for x in senal)/len(senal)
+
+desv = varianza**0.5
+
+coef_var = desv/media
+
+skew_manual = sum((x-media)**3 for x in senal)/len(senal)/(desv**3)
+
+kurt_manual = sum((x-media)**4 for x in senal)/len(senal)/(desv**4)
+
+print("\n========== DESDE CERO ==========")
+print("Media:", media)
+print("Desviación estándar:", desv)
+print("Coeficiente de variación:", coef_var)
+print("Asimetría (skewness):", skew_manual)
+print("Curtosis:", kurt_manual)
+```
+# Estadísticos usando funciones predefinidas
+Se repiten los cálculos utilizando funciones optimizadas:
+np.mean(),np.std(),skew(),kurtosis()
+Esto permite:Validar los resultados manuales,Reducir errores,Comparar precisión entre métodos.
+```
+# =========================================================
+# =========================================================
+# ESTADISTICOS CON FUNCIONES PYTHON
+# =========================================================
+# =========================================================
+
+media_np = np.mean(senal)
+desv_np = np.std(senal)
+coef_np = desv_np/media_np
+skew_np = skew(senal)
+kurt_np = kurtosis(senal)
+
+print("\n========== CON LIBRERIAS ==========")
+print("Media:", media_np)
+print("Desviación estándar:", desv_np)
+print("Coeficiente de variación:", coef_np)
+print("Asimetría:", skew_np)
+print("Curtosis:", kurt_np)
+```
 ## PARTE B 
 En la Parte B del laboratorio se generó experimentalmente una señal fisiológica mediante el generador de señales biológicas y posteriormente se adquirió utilizando un sistema DAQ conectado al computador a través de un puerto USB y configurado con el controlador NI-DAQmx. El dispositivo recibió la señal analógica, la convirtió a formato digital mediante su conversor analógico-digital (ADC) y la almacenó en un archivo con extensión `.csv`, que contenía las columnas correspondientes al tiempo de muestreo y a los valores de amplitud. La señal fue importada en Python mediante el entorno Spyder, donde se verificó su integridad, se graficó en el dominio del tiempo y se construyó su histograma para analizar la distribución de amplitudes.
 

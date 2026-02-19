@@ -16,7 +16,7 @@ Posteriormente, se calcularon los principales estadísticos descriptivos: media,
 
 ## SEÑAL ADQUIRIDA 
 
-<img width="2184" height="827" alt="image" src="https://github.com/user-attachments/assets/0759e42e-7bc8-44eb-9b23-e81168093c54" />
+<img width="2184" height="827" alt="image" src="ECGATLETAS.png" />
 
 ![diagrama parte a ](DiagramaA.jpeg)
 ## PARTE B 

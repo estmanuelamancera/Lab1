@@ -21,6 +21,123 @@ Posteriormente, se calcularon los principales estadísticos descriptivos: media,
 <img width="2184" height="827" alt="image" src="ECGATLETAS.png" />
 
 ## CÓDIGO
+# Instalación de la librería wfdb
+Se instala la librería wfdb, necesaria para leer archivos fisiológicos descargados de PhysioNet (.hea y .dat).
+```
+# =========================================================
+# PARTE A COMPLETA - ECG PHYSIONET
+# =========================================================
+
+# instalar wfdb (solo primera vez)
+!pip install wfdb
+```
+# Importación de librerías
+wfdb: para cargar registros fisiológicos.
+numpy: para operaciones matemáticas y manejo de arreglos.
+matplotlib: para graficar la señal.
+scipy.stats: para calcular asimetría y curtosis automáticamente.
+```
+# ---------------------------------------------------------
+# IMPORTAR LIBRERIAS
+# ---------------------------------------------------------
+import wfdb
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.stats import skew, kurtosis
+```
+# Corrección automática del archivo header (.hea)
+Algunas señales de PhysioNet tienen un nombre interno diferente al nombre del archivo.
+Aquí se:
+Lee el archivo .hea.
+Se verifica si el nombre interno coincide con "001".
+Si no coincide, se corrige automáticamente.
+Esto evita errores al momento de cargar el registro con wfdb.
+```
+# ---------------------------------------------------------
+# CORREGIR HEADER AUTOMATICAMENTE (problema comun physionet)
+# ---------------------------------------------------------
+with open("001.hea","r") as f:
+    texto = f.read()
+
+nombre_interno = texto.split()[0]
+
+if nombre_interno != "001":
+    texto = texto.replace(nombre_interno,"001")
+    with open("001.hea","w") as f:
+        f.write(texto)
+    print("Header corregido:", nombre_interno,"→ 001")
+else:
+    print("Header correcto")
+```
+# Carga de la señal ECG
+Se carga el registro completo usando wfdb, luego, se extrae el primer canal de la señal ECG.
+Después se eliminan valores NaN (si existen),también se obtiene la frecuencia de muestreo,esto es importante para construir correctamente el eje de tiempo.
+```
+# ---------------------------------------------------------
+# CARGAR SEÑAL
+# ---------------------------------------------------------
+record = wfdb.rdrecord("001")
+
+senal = record.p_signal[:,0]
+
+# eliminar NaN si existen
+senal = senal[~np.isnan(senal)]
+
+# frecuencia muestreo
+fs = record.fs
+
+print("Frecuencia:",fs,"Hz")
+print("Total muestras:",len(senal))
+```
+# Construcción del vector de tiempo
+Se crea el eje temporal dividiendo el número de muestras entre la frecuencia de muestreo.
+Esto permite graficar la señal en segundos.
+```
+# ---------------------------------------------------------
+# VECTOR DE TIEMPO
+# ---------------------------------------------------------
+tiempo = np.arange(len(senal))/fs
+```
+# Gráfica principal del ECG
+Se grafica la señal en el dominio del tiempo
+```
+# ---------------------------------------------------------
+# GRAFICA PRINCIPAL (FUCSIA + TITULO PEDIDO)
+# ---------------------------------------------------------
+plt.figure(figsize=(14,5))
+plt.plot(tiempo, senal, color='fuchsia')
+
+plt.title("ECG de Atletas de Resistencia Noruega",
+          fontsize=18, fontweight='bold')
+
+plt.xlabel("Tiempo (segundos)", fontsize=14)
+plt.ylabel("Amplitud (mV)", fontsize=14)
+
+plt.grid(True, alpha=0.3)
+plt.show()
+```
+# Histograma de la señal
+El histograma muestra la distribución de amplitudes del ECG:Permite observar:
+Concentración de valores.
+Simetría o inclinación de la distribución.
+Dispersión general de la señal.
+```
+# ---------------------------------------------------------
+# HISTOGRAMA
+# ---------------------------------------------------------
+plt.figure(figsize=(8,5))
+plt.hist(senal, bins=60, color='fuchsia', edgecolor='black')
+
+plt.title("Histograma de amplitud ECG",
+          fontsize=16, fontweight='bold')
+
+plt.xlabel("Amplitud")
+plt.ylabel("Frecuencia")
+plt.show()
+```
+## HISTOGRAMA
+
+<img width="2184" height="827" alt="image" src="ECGATLETAS.png" />
 
 ## PARTE B 
 En la Parte B del laboratorio se generó experimentalmente una señal fisiológica mediante el generador de señales biológicas y posteriormente se adquirió utilizando un sistema DAQ conectado al computador a través de un puerto USB y configurado con el controlador NI-DAQmx. El dispositivo recibió la señal analógica, la convirtió a formato digital mediante su conversor analógico-digital (ADC) y la almacenó en un archivo con extensión `.csv`, que contenía las columnas correspondientes al tiempo de muestreo y a los valores de amplitud. La señal fue importada en Python mediante el entorno Spyder, donde se verificó su integridad, se graficó en el dominio del tiempo y se construyó su histograma para analizar la distribución de amplitudes.

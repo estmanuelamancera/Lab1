@@ -10,6 +10,11 @@ Adicionalmente, se capturó una señal mediante un osciloscopio, utilizando un s
 3. Generar una señal fisiológica en el laboratorio, adquirirla mediante un sistema DAQ y evaluar sus propiedades estadísticas principales.
 ### PROCESAMIENTO 
 ## PARTE A 
+En la Parte, se realizó el análisis estadístico de una señal biomédica con el fin de caracterizarla mediante parámetros descriptivos. Se seleccionó una señal ECG obtenida de la base de datos pública PhysioNet, correspondiente a atletas de resistencia de Noruega.La señal fue descargada, importada en Python y graficada en el dominio del tiempo para observar su morfología y comportamiento general.
+
+Posteriormente, se calcularon los principales estadísticos descriptivos: media, desviación estándar, coeficiente de variación, histograma, asimetría (skewness) y curtosis. Estos parámetros se obtuvieron de dos maneras: implementando las fórmulas matemáticas desde cero y utilizando funciones predefinidas de Python.
+
+![diagrama parte a ](https://github.com/user-attachments/assets/7fd6434a-a7f1-4f3f-857c-db7333f66374)
 ## PARTE B 
 En la Parte B del laboratorio se generó experimentalmente una señal fisiológica mediante el generador de señales biológicas y posteriormente se adquirió utilizando un sistema DAQ conectado al computador a través de un puerto USB y configurado con el controlador NI-DAQmx. El dispositivo recibió la señal analógica, la convirtió a formato digital mediante su conversor analógico-digital (ADC) y la almacenó en un archivo con extensión `.csv`, que contenía las columnas correspondientes al tiempo de muestreo y a los valores de amplitud. La señal fue importada en Python mediante el entorno Spyder, donde se verificó su integridad, se graficó en el dominio del tiempo y se construyó su histograma para analizar la distribución de amplitudes.
 

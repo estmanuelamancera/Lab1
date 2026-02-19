@@ -171,6 +171,7 @@ kurt_manual = sum((x-media)**4 for x in senal)/len(senal)/(desv**4)
 
 print("\n========== DESDE CERO ==========")
 print("Media:", media)
+print("Varianza:", varianza)
 print("Desviación estándar:", desv)
 print("Coeficiente de variación:", coef_var)
 print("Asimetría (skewness):", skew_manual)
@@ -183,6 +184,7 @@ Esto permite:Validar los resultados manuales,Reducir errores,Comparar precisión
 ```
 # ESTADISTICOS CON FUNCIONES PYTHON
 media_np = np.mean(senal)
+var_np = np.var(senal)
 desv_np = np.std(senal)
 coef_np = desv_np/media_np
 skew_np = skew(senal)
@@ -190,6 +192,7 @@ kurt_np = kurtosis(senal)
 
 print("\n========== CON LIBRERIAS ==========")
 print("Media:", media_np)
+print("Varianza:", var_np)
 print("Desviación estándar:", desv_np)
 print("Coeficiente de variación:", coef_np)
 print("Asimetría:", skew_np)

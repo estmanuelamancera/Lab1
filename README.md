@@ -155,12 +155,8 @@ Aquí se implementan matemáticamente las ecuaciones:
 🔹 Curtosis:Mide qué tan puntiaguda o achatada es la distribución.
 Este bloque permite comprender la base matemática de cada parámetro.
 ```
-# =========================================================
-# =========================================================
-# ESTADISTICOS DESDE CERO (FORMULAS)
-# =========================================================
-# =========================================================
 
+# ESTADISTICOS DESDE CERO (FORMULAS)
 media = sum(senal)/len(senal)
 
 varianza = sum((x-media)**2 for x in senal)/len(senal)
@@ -185,12 +181,7 @@ Se repiten los cálculos utilizando funciones optimizadas:
 np.mean(),np.std(),skew(),kurtosis()
 Esto permite:Validar los resultados manuales,Reducir errores,Comparar precisión entre métodos.
 ```
-# =========================================================
-# =========================================================
 # ESTADISTICOS CON FUNCIONES PYTHON
-# =========================================================
-# =========================================================
-
 media_np = np.mean(senal)
 desv_np = np.std(senal)
 coef_np = desv_np/media_np
@@ -306,8 +297,6 @@ curt = kurtosis(senal)
 
 Los estadísticos descriptivos evidencian que la señal presenta un valor promedio de 1.22 V con una dispersión relativa del 33%. La alta asimetría positiva (2.5) y la curtosis elevada (4.69) indican una distribución no normal, caracterizada por la presencia de picos de alta amplitud que generan colas pesadas hacia valores superiores. Estos resultados son coherentes con el comportamiento observado en el histograma y reflejan la naturaleza no uniforme de la señal generada experimentalmente.
 
-
-# PROCESAMIENTO 
 
 ## PARTE C
 En esta seccion se tomo la señal del apartado anterior (La señal obtenida del generador de señales) para posteriormente agregarle diferentes tipos de ruido y finalmnete compararlas entre si.

@@ -308,7 +308,12 @@ curt = kurtosis(senal)
 
 
 ## PARTE C
-En esta seccion se tomo la señal del apartado anterior (La señal obtenida del generador de señales) para posteriormente agregarle diferentes tipos de ruido y finalmnete compararlas entre si.
+En esta seccion se tomo la señal del apartado anterior (La señal obtenida del generador de señales) para posteriormente agregarle diferentes tipos de ruido y finalmente compararlas entre si.
+
+### ALGORITMO PARTE C
+
+![GRÁFICA ALGORITMO]()
+
 
 ### PROCEDIMIENTO
 Para aplicar diferentes ruidos a una señal primero debemos partir de la base teórica de la relación entre una señal y el ruido (SNR), por ello entraremos a revisar primero conceptos para posteriormente aplicar los siguientes tipos de ruidos:

@@ -408,7 +408,20 @@ Asimismo, el análisis mediante histogramas permite visualizar la distribución 
 
 
 ### CONCLUSIÓN 
+El desarrollo del laboratorio permitió analizar y comparar señales fisiológicas desde dos enfoques complementarios: una señal real obtenida de una base de datos (Parte A) y una señal generada y adquirida experimentalmente (Parte B). La Parte A fue fundamental como referencia teórica, ya que permitió caracterizar el comportamiento estadístico típico de una señal fisiológica real, evidenciando una distribución relativamente simétrica y centrada, con alta variabilidad relativa respecto a su media.
+Por su parte, la Parte B permitió comprender cómo el proceso de generación y adquisición experimental influye en las propiedades estadísticas de la señal. Se observó la presencia de un nivel DC elevado, mayor asimetría positiva y una curtosis más alta, indicando picos de mayor amplitud y una distribución más concentrada con colas pesadas. Esto demuestra que factores como el hardware, la cuantización y el entorno experimental pueden modificar significativamente la forma y dispersión de la señal. Adicionalmente, el análisis de ruido realizado en la Parte C resaltó la importancia de evaluar la calidad de señal mediante la relación señal-ruido (SNR), parámetro esencial en procesamiento de señales biomédicas, ya que determina el nivel de información útil frente a interferencias.
 
+Por lo tanto, el laboratorio evidenció que el análisis estadístico no solo permite describir señales, sino también comparar su origen, evaluar su calidad y comprender el impacto del proceso de adquisición en sus características, lo cual es fundamental en aplicaciones de ingeniería biomédica.
 ### PREGUNTAS A LA DISCUCIÓN 
 1. Los valores estadisticos calculados sobre la señal sintética son exactamente iguales a los obtenidos a partir de la señal real?
+   No, los valores estadísticos no son iguales. Aunque ambas señales corresponden al mismo tipo fisiológico (ECG), presentan diferencias significativas en su     media, dispersión y forma de la distribución.
+   La señal real (Parte A) mostró una media cercana a cero y una asimetría baja, indicando una distribución aproximadamente simétrica. En contraste, la señal     sintética (Parte B) presentó una media mayor debido al nivel DC del generador, además de una asimetría positiva elevada y mayor curtosis, lo que evidencia     presencia de picos de alta amplitud. Estas diferencias se deben a que la señal real proviene de un sistema fisiológico natural, mientras que la señal          sintética depende de parámetros electrónicos y del proceso de adquisición, lo cual introduce variaciones en su comportamiento estadístico.
 2. ¿ Afecta el tipo de ruido el valor de la SNR calculado? ¿Cuáles podrían ser las razones?
+   Sí, el tipo de ruido afecta directamente el valor de la SNR. La relación señal-ruido (SNR) depende tanto de la potencia de la señal como de la potencia del    ruido. Sin embargo, diferentes tipos de ruido tienen características estadísticas distintas:
+    -Ruido gaussiano: se distribuye de forma continua y afecta de manera uniforme la señal.
+    -Ruido impulso (salt-and-pepper): introduce picos abruptos que aumentan significativamente la potencia del ruido.
+    -Ruido estructurado o artefactos: pueden afectar regiones específicas de la señal.
+   Debido a estas diferencias, aunque la potencia promedio del ruido pueda ser similar, el impacto sobre la señal y sobre los parámetros estadísticos no será     el mismo. Por ejemplo, el ruido impulsivo suele reducir más drásticamente la SNR porque introduce valores extremos que incrementan la energía del ruido.
+
+Teóricamente, la SNR se define como:
+   

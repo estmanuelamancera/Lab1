@@ -312,7 +312,7 @@ En esta seccion se tomo la señal del apartado anterior (La señal obtenida del 
 
 ### ALGORITMO PARTE C
 
-![GRÁFICA ALGORITMO]()
+![GRÁFICA ALGORITMO](https://github.com/estmanuelamancera/Lab1/blob/main/IMAGENES/flow%20planning%20snr.png?raw=true)
 
 
 ### PROCEDIMIENTO

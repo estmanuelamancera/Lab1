@@ -307,6 +307,7 @@ curt = kurtosis(senal)
 
 La señal de la Parte A presenta una media cercana a cero (0.085), mientras que la Parte B tiene una media significativamente mayor (1.22), lo cual indica la presencia de un nivel DC en la señal generada experimentalmente. Aunque la varianza y la desviación estándar son mayores en la Parte B, el coeficiente de variación es considerablemente más alto en la Parte A (1.97 frente a 0.33), lo que evidencia que la señal real tiene mayor dispersión relativa respecto a su promedio.
 En cuanto a la forma de la distribución, la Parte A muestra una asimetría cercana a cero (0.18), lo que indica comportamiento aproximadamente simétrico. En contraste, la Parte B presenta fuerte asimetría positiva (2.50), asociada a picos de alta amplitud. Ambas señales tienen curtosis mayor que 3, lo que indica distribuciones leptocúrticas con presencia de valores extremos, siendo más pronunciado este efecto en la señal experimental.
+
 En conclusión, aunque ambas señales corresponden al mismo tipo fisiológico, los resultados evidencian que el proceso de generación y adquisición experimental introduce variaciones en el nivel promedio y en la forma de la distribución, especialmente en la asimetría y la presencia de valores extremos. Esto demuestra la importancia de realizar un análisis estadístico para caracterizar adecuadamente el comportamiento de señales biomédicas reales y simuladas.
 
 ## PARTE C
@@ -423,7 +424,7 @@ Por lo tanto, el laboratorio evidenció que el análisis estadístico no solo pe
     -Ruido impulso (salt-and-pepper): introduce picos abruptos que aumentan significativamente la potencia del ruido.
     -Ruido estructurado o artefactos: pueden afectar regiones específicas de la señal.
    Debido a estas diferencias, aunque la potencia promedio del ruido pueda ser similar, el impacto sobre la señal y sobre los parámetros estadísticos no será     el mismo. Por ejemplo, el ruido impulsivo suele reducir más drásticamente la SNR porque introduce valores extremos que incrementan la energía del ruido.
-   Teóricamente, la SNR se define como: Se obaserva en la parte c
+   Teóricamente, la SNR se define como: Se obaserva en la parte C
    Por lo tanto, cualquier cambio en la potencia del ruido o en su distribución afectará directamente el valor calculado.
    
    

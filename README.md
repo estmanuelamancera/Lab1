@@ -396,9 +396,14 @@ snr_artefacto = calcular_snr(senal, ruido_artefacto)
 
 ```
 ## ANÁLISIS DE RESULTADOS 
-Los parámetros estadísticos permiten analizar señales biomédicas de forma rápida y sencilla, ya que resumen su comportamiento general mediante valores como la media o la variabilidad. Esto ayuda a identificar cambios anormales que pueden estar relacionados con posibles patologías y facilita el monitoreo continuo de los pacientes y el análisis automático de grandes cantidades de datos.
+1.Los parámetros estadísticos permiten analizar señales biomédicas de forma rápida y sencilla, ya que resumen su comportamiento general mediante valores como la media o la variabilidad. Esto ayuda a identificar cambios anormales que pueden estar relacionados con posibles patologías y facilita el monitoreo continuo de los pacientes y el análisis automático de grandes cantidades de datos.
 
 Sin embargo, estos parámetros solo describen la señal de manera global y pueden perder información importante sobre detalles específicos del proceso fisiológico. Además, pueden verse afectados por ruido, movimientos o errores durante la adquisición, por lo que deben utilizarse como apoyo y no como único criterio diagnóstico.
+
+2.El uso de parámetros estadísticos descriptivos permite realizar una evaluación inicial de la calidad de señales biomédicas, ya que facilitan la caracterización cuantitativa de su comportamiento mediante medidas como la media, desviación estándar, coeficiente de variación, asimetría y curtosis. A partir de los resultados obtenidos, se evidencian diferencias importantes entre la señal generada artificialmente y la señal proveniente de PhysioNet, siendo esta última más variable debido a la presencia de fenómenos fisiológicos reales, interferencias ambientales y posibles artefactos de adquisición. La mayor desviación estándar y asimetría observadas en la señal clínica reflejan la existencia de eventos dominantes como los complejos QRS, propios de un ECG real.
+
+Asimismo, el análisis mediante histogramas permite visualizar la distribución de amplitudes y detectar posibles valores atípicos o concentraciones anormales asociadas al ruido. Sin embargo, aunque estos parámetros permiten comparar tendencias generales y niveles de dispersión entre señales, presentan limitaciones importantes, ya que no consideran la información temporal ni la morfología específica del ECG, aspectos fundamentales para su interpretación clínica. Además, pueden verse afectados por valores extremos o artefactos, sin distinguir claramente entre variabilidad fisiológica normal y ruido externo. Por ello, los estadísticos descriptivos deben emplearse como una herramienta complementaria dentro de un análisis más completo de la señal biomédica.
+
 
 ### CONCLUSIÓN 
 

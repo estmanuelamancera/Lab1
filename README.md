@@ -395,7 +395,7 @@ Los parámetros estadísticos permiten analizar señales biomédicas de forma r�
 
 Sin embargo, estos parámetros solo describen la señal de manera global y pueden perder información importante sobre detalles específicos del proceso fisiológico. Además, pueden verse afectados por ruido, movimientos o errores durante la adquisición, por lo que deben utilizarse como apoyo y no como único criterio diagnóstico.
 
-### CONCLUCIÓN 
+### CONCLUSIÓN 
 
 ### PREGUNTAS A LA DISCUCIÓN 
 1. Los valores estadisticos calculados sobre la señal sintética son exactamente iguales a los obtenidos a partir de la señal real?

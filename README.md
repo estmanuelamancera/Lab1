@@ -305,7 +305,9 @@ curt = kurtosis(senal)
 | Asimetría | 0.1815729743269685 | 2.4958785739425173 |
 | Curtosis | 3.951167563078484 | 4.689155028469519 |
 
-
+La señal de la Parte A presenta una media cercana a cero (0.085), mientras que la Parte B tiene una media significativamente mayor (1.22), lo cual indica la presencia de un nivel DC en la señal generada experimentalmente. Aunque la varianza y la desviación estándar son mayores en la Parte B, el coeficiente de variación es considerablemente más alto en la Parte A (1.97 frente a 0.33), lo que evidencia que la señal real tiene mayor dispersión relativa respecto a su promedio.
+En cuanto a la forma de la distribución, la Parte A muestra una asimetría cercana a cero (0.18), lo que indica comportamiento aproximadamente simétrico. En contraste, la Parte B presenta fuerte asimetría positiva (2.50), asociada a picos de alta amplitud. Ambas señales tienen curtosis mayor que 3, lo que indica distribuciones leptocúrticas con presencia de valores extremos, siendo más pronunciado este efecto en la señal experimental.
+En conclusión, aunque ambas señales corresponden al mismo tipo fisiológico, los resultados evidencian que el proceso de generación y adquisición experimental introduce variaciones en el nivel promedio y en la forma de la distribución, especialmente en la asimetría y la presencia de valores extremos. Esto demuestra la importancia de realizar un análisis estadístico para caracterizar adecuadamente el comportamiento de señales biomédicas reales y simuladas.
 
 ## PARTE C
 En esta seccion se tomo la señal del apartado anterior (La señal obtenida del generador de señales) para posteriormente agregarle diferentes tipos de ruido y finalmente compararlas entre si.
